@@ -1,1 +1,26 @@
-/* empty */
+:root {
+    --accent: #FF28D0;
+    
+    --error: rgba(255, 0, 0, 0.75);
+}
+
+/* Background colors */
+:root {
+    --background: #121212;
+    --background-extend: #FFFFFF;
+
+    --background-input: #1F1F1F;
+}
+
+/* Text colors */
+:root {
+    --text: #FFFFFF;
+    --text-extend: #121212;
+    --text-accent: #3632FF;
+    --text-accent-extend: #FF28D0;
+}
+
+/* Select colors */
+:root {
+    --selection: #ff00c87a;
+}

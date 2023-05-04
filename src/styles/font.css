@@ -1,1 +1,66 @@
-/* empty */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+h1 {
+    font-size: 42px;
+    line-height: 48px;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 21px;
+    line-height: 34px;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+input {
+    font-size: 21px;
+    line-height: 34px;
+}
+
+
+.text {
+    font-family: "Lato", sans-serif;
+    color: var(--text);
+}
+
+.text-extend {
+    color: var(--text-extend);
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-regular {
+    font-weight: 400;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-accent {
+    color: var(--text-accent);
+}
+
+.text-accent-extend {
+    color: var(--text-accent-extend);
+}
