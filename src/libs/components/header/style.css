@@ -1,6 +1,8 @@
 header {
     height: 8vh;
 
+    padding: 1rem 0;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -18,8 +20,6 @@ div.header-block {
 span.title-logo {
     display: flex;
     gap: -20px;
-
-    font-size: 62px;
 }
 
 button {

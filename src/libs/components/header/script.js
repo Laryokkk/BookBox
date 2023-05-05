@@ -19,8 +19,8 @@ class Header {
             <header>
                 <div class="header-block block-logo">
                     <span class="title-logo">
-                        <span class="text text-accent">B</span>
-                        <span class="text text-accent-extend">B</span>
+                        <span class="text text-title text-accent">B</span>
+                        <span class="text text-title text-accent-extend">B</span>
                     </span>
                 </div>
                 <div class="header-block block-menu">

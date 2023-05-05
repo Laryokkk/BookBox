@@ -69,6 +69,10 @@ input {
     color: var(--text-extend);
 }
 
+.text-title {
+    font-size: 58px;
+}
+
 a:hover > .text {
     color: var(--text-accent);
 }
