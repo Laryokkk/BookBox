@@ -16,11 +16,11 @@
 :root {
     --text: #FFFFFF;
     --text-extend: #121212;
-    --text-accent: #3632FF;
-    --text-accent-extend: #FF28D0;
+    --text-accent: #8D163A;
+    --text-accent-extend: #638E08;
 }
 
 /* Select colors */
 :root {
-    --selection: #ff00c87a;
+    --selection: rgba(141, 22, 58, 0.5);;
 }

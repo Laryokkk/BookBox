@@ -1,1 +1,29 @@
-/* empty */
+header {
+    height: 8vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+div.header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 6rem;
+}
+
+span.title-logo {
+    display: flex;
+    gap: -20px;
+
+    font-size: 62px;
+}
+
+button {
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    background-color: var(--background-extend);
+}
