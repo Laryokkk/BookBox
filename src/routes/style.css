@@ -33,3 +33,59 @@ div.glass-container-right {
     bottom: 15vh;
     right: 10vw;
 }
+
+section#products {
+    margin: 5vh 5vw;
+}
+
+div.container {
+    padding: 1rem;
+
+    background-color: var(--background-extend);
+}
+
+div.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+button.button-librarys,
+button.button-filters {
+    width: 20vw;
+
+    padding: 0.4rem 1rem;
+
+    background-color: var(--background-accent);
+}
+
+button.button-librarys > *,
+button.button-filters > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.find {
+    width: 30vw;
+    height: 3rem;
+
+    margin: 0;
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.4rem 1rem;
+
+    background-color: var(--background-input);
+}
+
+input.find:active {
+    border: 0;
+}
