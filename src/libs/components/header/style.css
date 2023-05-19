@@ -22,7 +22,7 @@ span.title-logo {
     gap: -20px;
 }
 
-button {
+button.button-heading {
     padding: 0.4rem 1rem;
     border-radius: 10px;
     background-color: var(--background-extend);

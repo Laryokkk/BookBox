@@ -41,12 +41,12 @@ class Header {
                     </a>
                 </div>
                 <div class="header-block block-account">
-                    <button class="button-sign button-extend hidden">
+                    <button class="button-heading button-sign button-extend hidden">
                         <h3 class="text text-accent">
                             Accedi
                         </h3>
                     </button>
-                    <button class="button-exit button-extend hidden">
+                    <button class="button-heading button-exit button-extend hidden">
                         <h3 class="text text-accent">
                             Esci
                         </h3>

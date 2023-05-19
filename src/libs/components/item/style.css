@@ -19,7 +19,7 @@ div.item-back {
     height: 100%;
     width: 100%;
 
-    transition: all 0.8s ease;
+    transition: all 0.8s ease 0.1s;
     backface-visibility: hidden;
 
     border-radius: 1.5rem;
@@ -60,6 +60,8 @@ div.footer {
 button.button-item {
     width: 90%;
 
+    margin-top: 1rem;
+    padding: 0 1rem;
     border-radius: 1rem;
 
     background-color: var(--background-accent-extend);
