@@ -1,1 +1,92 @@
-/* empty */
+section {
+    border-radius: 2rem;
+}
+
+section#container {
+    margin: 5vh 5vw;
+}
+
+div.container {
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+div.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+button.button-librarys,
+button.button-filters {
+    width: 20vw;
+
+    border-radius: 1rem;
+    padding: 0.4rem 1rem;
+
+    background-color: var(--background-accent);
+}
+
+button.button-librarys > *,
+button.button-filters > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.find {
+    width: 30vw;
+    height: 3rem;
+
+    margin: 0;
+    border: 0;
+    border-radius: 1rem;
+    padding: 0.4rem 1rem;
+
+    background-color: var(--background-extend);
+}
+
+input.find:active {
+    border: 0;
+}
+
+div.list {
+    max-width: 90vw;
+
+    margin-top: 4rem;
+}
+
+table {
+    width: 100%;
+}
+
+tbody.table-content {
+    overflow:hidden;
+    overflow-y: scroll;
+    height: 100px;
+}
+
+tr.row:hover > th.cell:not(th.cell-head) {
+    background-color: var(--background-accent);
+
+    cursor: pointer;
+}
+
+th.cell {
+    border: 1px solid var(--background-line);
+    padding: 0.4rem 2rem;
+
+    background-color: var(--background-extend);
+}
+
+th.cell-head {
+    background-color: var(--background-accent);
+}
