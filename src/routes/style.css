@@ -1,3 +1,7 @@
+section {
+    border-radius: 2rem;
+}
+
 section#heading {
     position: relative;
 
@@ -40,6 +44,7 @@ section#products {
 
 div.container {
     padding: 1rem;
+    border-radius: 2rem;
 
     background-color: var(--background-extend);
 }
@@ -99,4 +104,23 @@ div.item-list {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+}
+
+section#google-maps {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    padding: 5rem;
+    margin: 20vh 5vw;
+    background-color: var(--background-extend);
+}
+
+section#google-maps > .container {
+    width: 80vw;
+    height: 60vh;
+
+    border-radius: 1rem;
 }

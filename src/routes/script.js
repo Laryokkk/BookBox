@@ -5,6 +5,7 @@ const sections = {
     header: document.querySelector('section#header'),
     heading: document.querySelector('section#heading'),
     itemList: document.querySelector('.item-list'),
+    googleMaps: document.querySelector("#google-maps>.container"),
 }
 
 const header = new Header(sections.header)
@@ -21,20 +22,66 @@ itemTest1.init();
 const itemTest2 = new Item(sections.itemList, props);
 itemTest2.init();
 
-const itemTest3 = new Item(sections.itemList, props);
-itemTest1.init();
+// let map;
 
-const itemTest4 = new Item(sections.itemList, props);
-itemTest2.init();
+// function initMap() {
+//   map = new google.maps.Map(document.getElementById("google-maps"), {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 8,
+//   });
+// }
 
-const itemTest5 = new Item(sections.itemList, props);
-itemTest1.init();
+// window.initMap = initMap;
 
-const itemTest6 = new Item(sections.itemList, props);
-itemTest2.init();
+const latitudine = 45.650075;
+const longitudine = 13.767766;
 
-const itemTest7 = new Item(sections.itemList, props);
-itemTest1.init();
+const mapOptions = {
+    center: new google.maps.LatLng(latitudine, longitudine),
+    zoom: 16,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+};
 
-const itemTest8 = new Item(sections.itemList, props);
-itemTest2.init();
+const googleMaps = new google.maps.Map(sections.googleMaps, mapOptions);
+new google.maps.Marker({
+    position: new google.maps.LatLng(latitudine, longitudine),
+    map: googleMaps,
+});
+
+// onMount(() => {
+//     const latitudine = 45.650075;
+//     const longitudine = 13.767766;
+//     const mapOptions = {
+//         center: new google.maps.LatLng(latitudine, longitudine),
+//         zoom: 16,
+//         mapTypeId: google.maps.MapTypeId.ROADMAP,
+//     };
+//     const map = new google.maps.Map(gMap, mapOptions);
+    
+
+    // fetchPost(`${urlBase}/select_caseifici.php`, {}).then(
+    //     async (fetchResponce) => {
+    //         const { status, data } = fetchResponce;
+
+    //         if (status >= 400) return;
+
+    //         const image =
+    //             "https://www.appalo.it/quinta/images/formaggio.png";
+
+    //         data.forEach(({ lagn, logn, code_caseificio }) => {
+    //             const pLatLng = new google.maps.LatLng(lagn, logn);
+
+    //             const marker = new google.maps.Marker({
+    //                 position: pLatLng,
+    //                 map: map,
+    //                 icon: image,
+    //                 url: `/caseificio/${code_caseificio}`,
+    //             });
+
+    //             google.maps.event.addListener(marker, "click", () => {
+    //                 window.location.href = marker.url;
+    //             });
+    //         });
+    //     }
+    // );
+// });
