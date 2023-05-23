@@ -14,6 +14,9 @@ const sections = {
     notFind: document.querySelector('#not-find'),
 }
 
+let filterOptions = '';
+let searchOptions = '';
+
 const header = new Header(sections.header)
 header.init();
 
@@ -33,8 +36,27 @@ items.forEach(item => {
 
 sections.searchBar.addEventListener('input', (e) => {
     const { value } = e.target;
+    searchOptions = value;
 
-    if (value === '') {
+    refreshItems();
+});
+
+sections.filterLibrarys.addEventListener('handlerChangeDropdown', (e) => {
+    updateFilter(filterLibrary);
+});
+
+sections.filterItems.addEventListener('handlerChangeDropdown', (e) => {
+    updateFilter(filterItem)
+});
+
+const updateFilter = (section) => {
+    filterOptions = section.getCheckedBoxes();
+
+    refreshItems();
+};
+
+const refreshItems = () => {
+    if (searchOptions === '' && filterOptions === '') {
         listItems.forEach(component => {
             component.toggle(false);
         });
@@ -48,17 +70,16 @@ sections.searchBar.addEventListener('input', (e) => {
     listItems.forEach(component => {
         const values = Object.values(component.props).toString();
 
-        if (values.toLowerCase().includes(value.toLowerCase())) {
-            component.toggle(false);
-            counter += 1;
+        if (values.toLowerCase().includes(searchOptions.toLowerCase())) {
+            if (filterOptions === '' || values.toLowerCase().includes(filterOptions.toLowerCase())) {
+                component.toggle(false);
+                counter += 1;
+            }
         }
     });
 
     sections.notFind.classList.toggle('hidden', counter !== 0);
-});
-
-
-
+};
 
 
 

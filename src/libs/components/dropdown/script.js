@@ -8,11 +8,14 @@ class DropDown {
             title: props.title,
             checkboxList: props.checkboxList,
         };
+
+        this.elements = {};
     }
 
     init() {
         this.initTemplate();
         this.initElements();
+        this.initEventListeners();
         this.render();
     }
 
@@ -22,7 +25,7 @@ class DropDown {
 
             list.forEach(el => {
                 str += `<div class="wrapper-checkbox">
-                    <input type="checkbox" class="checkbox" name="${el.name}-${el.title}" id="${el.name}-${el.title}">
+                    <input type="checkbox" class="checkbox" name="${el.title}" id="${el.name}-${el.title}">
                     <h4 class="text">
                         ${el.titleText}
                     </h4>
@@ -48,12 +51,38 @@ class DropDown {
 
     initElements() {
         this.rootElement = componentUtils.htmlDOMConverter(this.template);
+
+        this.elements = {
+            inputList: this.rootElement.querySelectorAll('input'),
+        };
+    }
+
+    initEventListeners() {
+        this.elements.inputList.forEach(input => {
+            input.addEventListener('change', (e) => {
+                this.rootElement.dispatchEvent(new CustomEvent('handlerChangeDropdown', {
+                    bubbles: true,
+                }));
+            });
+        });
     }
 
     render() {
         if (!this.rootElement) return;
 
         componentUtils.render(this.parentElement, this.rootElement);
+    }
+
+    getCheckedBoxes() {
+        let checked = [];
+
+        this.elements.inputList.forEach(element => {
+            element.checked && checked.push(element.getAttribute('name'));
+        });
+
+        checked = checked.toString().replace('-', ' ');
+
+        return checked;
     }
 }
 

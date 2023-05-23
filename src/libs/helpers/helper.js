@@ -15,6 +15,7 @@ libraries.push({
                 publisher: 'Home of books',
                 isbn: '687356654',
                 available: '21/06/2022',
+                library: 'San Giacomo',
             },
             {
                 isbn: '231242312',
@@ -24,6 +25,7 @@ libraries.push({
                 publisher: 'Home of books',
                 isbn: '687356654',
                 available: '21/06/2022',
+                library: 'San Giacomo',
             },
             {
                 isbn: '231242312',
@@ -33,6 +35,7 @@ libraries.push({
                 publisher: 'Home of books',
                 isbn: '687356654',
                 available: '21/06/2022',
+                library: 'San Giacomo',
             },
         ]
     }
@@ -47,6 +50,7 @@ const items = [
         published: '2001/02/21',
         publisher: 'Home of books',
         available: '21/06/2022',
+        library: 'San Giacomo',
     },
     {
         imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
@@ -56,6 +60,7 @@ const items = [
         published: '2001/02/21',
         publisher: 'Home of books',
         available: '21/06/2022',
+        library: 'San Giacomo',
     },
     {
         imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
@@ -65,6 +70,7 @@ const items = [
         published: '2001/02/21',
         publisher: 'Home of books',
         available: '21/06/2022',
+        library: 'San Giacomo',
     },
     {
         imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
@@ -74,6 +80,7 @@ const items = [
         published: '2001/02/21',
         publisher: 'Home of books',
         available: '21/06/2022',
+        library: 'San Giacomo',
     },
     {
         imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
@@ -83,6 +90,7 @@ const items = [
         published: '2001/02/21',
         publisher: 'Home of books',
         available: '21/06/2022',
+        library: 'San Giacomo',
     },
     {
         imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
@@ -92,6 +100,7 @@ const items = [
         published: '2001/02/21',
         publisher: 'Home of books',
         available: '21/06/2022',
+        library: 'San Giacomo',
     },
 ]
 

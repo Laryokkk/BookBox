@@ -17,7 +17,7 @@ class Item {
     }
 
     initTemplate() {
-        const { imgPath, title, author, published, publisher, isbn, available } = this.props;
+        const { imgPath, title, author, published, publisher, isbn, available, library } = this.props;
 
         this.template = `<section id="_template">
             <div class="item-container">
@@ -42,6 +42,9 @@ class Item {
                         </h5>
                         <h5 class="text">
                             ISBN: <span class="text text-accent-extend">${isbn}<span/>
+                        </h5>
+                        <h5 class="text">
+                            Biblioteca: <span class="text text-accent-extend">${library}<span/>
                         </h5>
                     </div>
                     <div class="footer">
