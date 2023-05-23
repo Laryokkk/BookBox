@@ -57,27 +57,12 @@ div.heading {
 }
 
 div.button-group {
+    height: 70px;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2rem;
-}
-
-button.button-librarys,
-button.button-filters {
-    width: 20vw;
-
-    border-radius: 1rem;
-    padding: 0.4rem 1rem;
-
-    background-color: var(--background-accent);
-}
-
-button.button-librarys > *,
-button.button-filters > * {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 input.find {

@@ -1,1 +1,54 @@
-/* empty */
+button.button-librarys,
+button.button-filters {
+    width: 20vw;
+    height: 42px;
+
+    border-radius: 1rem;
+    padding: 0.4rem 1rem;
+
+    background-color: var(--background-accent);
+}
+
+button.button-librarys > *,
+button.button-filters > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.button-dropdown {
+    position: relative;
+    cursor: pointer;
+    z-index: 90;
+    transition: all 0.3s ease-in-out;
+}
+
+button.button-dropdown:hover > div.dropdown {
+    opacity: 1;
+}
+
+button.button-dropdown:hover {
+    height: 170px;
+    margin-top: 120px;
+}
+
+div.dropdown {
+    position: relative;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+
+    padding: 1rem;
+
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 100;
+}
+
+div.wrapper-checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}

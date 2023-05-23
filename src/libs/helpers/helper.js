@@ -31,3 +31,47 @@ libraries.push({
         ]
     }
 });
+
+const filterLibrary = {
+    title: 'Biblioteche',
+    checkboxList: [
+        {
+            name: 'library',
+            title: 'san-giacomo',
+            titleText: 'San Giacomo',
+        },
+        {
+            name: 'library',
+            title: 'san-giacomo',
+            titleText: 'San Giacomo',
+        },
+        {
+            name: 'library',
+            title: 'san-giacomo',
+            titleText: 'San Giacomo',
+        },
+    ]
+};
+
+const filterItems = {
+    title: 'Filtri',
+    checkboxList: [
+        {
+            name: 'item',
+            title: 'books',
+            titleText: 'Libri',
+        },
+        {
+            name: 'item',
+            title: 'maps',
+            titleText: 'Carte',
+        },
+        {
+            name: 'item',
+            title: 'encyclopedia',
+            titleText: 'Encyclopedie',
+        },
+    ],
+};
+
+export { filterLibrary, filterItems };
