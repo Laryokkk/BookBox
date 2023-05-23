@@ -109,3 +109,12 @@ section#google-maps > .container {
 
     border-radius: 1rem;
 }
+
+#not-find {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+input.find {
+    text-align: center;
+}

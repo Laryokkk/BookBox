@@ -136,3 +136,8 @@ a {
 button {
     all: unset;
 }
+
+input {
+    -webkit-appearance: none;
+    outline: none;
+}

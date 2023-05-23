@@ -6,6 +6,7 @@ const sections = {
     header: document.querySelector('section#header'),
     filterLibrarys: document.querySelector('div.button-group > div.librarys'),
     filterItems: document.querySelector('div.button-group > div.items'),
+    notFind: document.querySelector('#not-find'),
 }
 
 const header = new Header(sections.header)

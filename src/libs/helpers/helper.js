@@ -10,27 +10,90 @@ libraries.push({
             {
                 isbn: '231242312',
                 title: 'The Hobbit',
-                authors: ['J.R.R. Tolkien'],
+                author: ['J.R.R. Tolkien'],
                 published: '2001/02/21',
-                publishingHouse: 'Home of books',
+                publisher: 'Home of books',
+                isbn: '687356654',
+                available: '21/06/2022',
             },
             {
                 isbn: '231242312',
                 title: 'The Hobbit',
-                authors: ['J.R.R. Tolkien'],
+                author: ['J.R.R. Tolkien'],
                 published: '2001/02/21',
-                publishingHouse: 'Home of books',
+                publisher: 'Home of books',
+                isbn: '687356654',
+                available: '21/06/2022',
             },
             {
                 isbn: '231242312',
                 title: 'The Hobbit',
-                authors: ['J.R.R. Tolkien'],
+                author: ['J.R.R. Tolkien'],
                 published: '2001/02/21',
-                publishingHouse: 'Home of books',
+                publisher: 'Home of books',
+                isbn: '687356654',
+                available: '21/06/2022',
             },
         ]
     }
 });
+
+const items = [
+    {
+        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
+        isbn: '231242312',
+        title: 'The Hobbit',
+        author: ['J.R.R. Tolkien'],
+        published: '2001/02/21',
+        publisher: 'Home of books',
+        available: '21/06/2022',
+    },
+    {
+        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
+        isbn: '231242312',
+        title: 'The Hobbit',
+        author: ['J.R.R. Tolkien'],
+        published: '2001/02/21',
+        publisher: 'Home of books',
+        available: '21/06/2022',
+    },
+    {
+        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
+        isbn: '231242312',
+        title: 'The Hobbit',
+        author: ['J.R.R. Tolkien'],
+        published: '2001/02/21',
+        publisher: 'Home of books',
+        available: '21/06/2022',
+    },
+    {
+        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
+        isbn: '231242312',
+        title: 'The Hobbit',
+        author: ['J.R.R. Tolkien'],
+        published: '2001/02/21',
+        publisher: 'Home of books',
+        available: '21/06/2022',
+    },
+    {
+        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
+        isbn: '231242312',
+        title: 'The Hobbit',
+        author: ['J.R.R. Tolkien'],
+        published: '2001/02/21',
+        publisher: 'Home of books',
+        available: '21/06/2022',
+    },
+    {
+        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
+        isbn: '231242312',
+        title: 'The Hobbit',
+        author: ['J.R.R. Tolkien'],
+        published: '2001/02/21',
+        publisher: 'Home of books',
+        available: '21/06/2022',
+    },
+]
 
 const filterLibrary = {
     title: 'Biblioteche',
@@ -74,4 +137,4 @@ const filterItems = {
     ],
 };
 
-export { filterLibrary, filterItems };
+export { filterLibrary, filterItems, items };

@@ -1,7 +1,7 @@
 import Header from "../libs/components/header/script.js";
 import Item from "../libs/components/item/script.js";
 import DropDown from "../libs/components/dropdown/script.js";
-import { filterLibrary as filterLibraryProps, filterItems as filterItemsProps} from "../libs/helpers/helper.js"
+import { filterLibrary as filterLibraryProps, filterItems as filterItemsProps, items} from "../libs/helpers/helper.js"
 
 const sections = {
     header: document.querySelector('section#header'),
@@ -10,6 +10,8 @@ const sections = {
     filterItems: document.querySelector('div.button-group > div.items'),
     itemList: document.querySelector('.item-list'),
     googleMaps: document.querySelector("#google-maps>.container"),
+    searchBar: document.querySelector('#search-bar'),
+    notFind: document.querySelector('#not-find'),
 }
 
 const header = new Header(sections.header)
@@ -21,26 +23,44 @@ filterLibrary.init();
 const filterItem = new DropDown(sections.filterItems, filterItemsProps);
 filterItem.init();
 
-const props = { imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg', title: 'The Hobbit', author: 'J.R.R. Tolkien', published: '2001/02/21', publisher: 'Home of books', isbn: '687356654', available: '21/06/2022' };
-const itemTest = new Item(sections.itemList, props);
-itemTest.init();
+const listItems = [];
+items.forEach(item => {
+    const itemComponent = new Item(sections.itemList, item);
+    itemComponent.init();
 
-const itemTest1 = new Item(sections.itemList, props);
-itemTest1.init();
+    listItems.push(itemComponent);
+});
 
-const itemTest2 = new Item(sections.itemList, props);
-itemTest2.init();
+sections.searchBar.addEventListener('input', (e) => {
+    const { value } = e.target;
 
-// let map;
+    if (value === '') {
+        listItems.forEach(component => {
+            component.toggle(false);
+        });
+    };
 
-// function initMap() {
-//   map = new google.maps.Map(document.getElementById("google-maps"), {
-//     center: { lat: -34.397, lng: 150.644 },
-//     zoom: 8,
-//   });
-// }
+    listItems.forEach(component => {
+        component.toggle(true);
+    });
 
-// window.initMap = initMap;
+    let counter = 0;
+    listItems.forEach(component => {
+        const values = Object.values(component.props).toString();
+
+        if (values.toLowerCase().includes(value.toLowerCase())) {
+            component.toggle(false);
+            counter += 1;
+        }
+    });
+
+    sections.notFind.classList.toggle('hidden', counter !== 0);
+});
+
+
+
+
+
 
 const latitudine = 45.650075;
 const longitudine = 13.767766;

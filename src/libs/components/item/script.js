@@ -3,9 +3,10 @@ import { componentUtils } from "../../utils/componentUtils.js";
 class Item {
     constructor(parentElement, props) {
         this.parentElement = parentElement;
-        this.props = props;
+        this.props = { ...props };
 
         this.elements = {};
+        this.isOpen = true;
     }
 
     init() {
@@ -72,6 +73,12 @@ class Item {
         if (!this.rootElement) return;
 
         componentUtils.render(this.parentElement, this.rootElement);
+    }
+
+    toggle(force) {
+        this.isOpen = !force;
+
+        this.rootElement.classList.toggle('hidden', force);
     }
 }
 

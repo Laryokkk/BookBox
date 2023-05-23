@@ -75,3 +75,12 @@ th.cell {
 th.cell-head {
     background-color: var(--background-accent);
 }
+
+#not-find {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+input.find {
+    text-align: center;
+}
