@@ -23,23 +23,7 @@ class Header {
                         <span class="text text-title text-accent-extend">B</span>
                     </span>
                 </div>
-                <div class="header-block block-menu">
-                    <a href="" class="text">
-                        <h3 class="text">
-                            Home
-                        </h3>
-                    </a>
-                    <a href="" class="text">
-                        <h3 class="text">
-                            Prenota
-                        </h3>
-                    </a>
-                    <a href="" class="text">
-                        <h3 class="text">
-                            Dove siamo
-                        </h3>
-                    </a>
-                </div>
+                <div></div>
                 <div class="header-block block-account">
                     <button class="button-heading button-sign button-extend hidden">
                         <h3 class="text text-accent">
@@ -60,7 +44,6 @@ class Header {
         this.rootElement = componentUtils.htmlDOMConverter(this.template);
 
         this.elements = {
-            blockMenu: this.rootElement.querySelector('div.block-menu'),
             buttonSign: this.rootElement.querySelector('button.button-sign'),
             buttonExit: this.rootElement.querySelector('button.button-exit'),
         };

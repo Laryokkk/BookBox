@@ -26,4 +26,13 @@ button.button-heading {
     padding: 0.4rem 1rem;
     border-radius: 10px;
     background-color: var(--background-extend);
+    cursor: pointer;
+}
+
+button.button-heading:hover {
+    background-color: var(--background-accent);
+}
+
+button.button-heading:hover > * {
+    color: var(--text);
 }
