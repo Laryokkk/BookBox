@@ -49,6 +49,16 @@ div.dropdown {
 
 div.wrapper-checkbox {
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 1rem;
+}
+
+input[type="checkbox"] {
+    height: 1.2rem;
+    width: 1.2rem;
+
+    border: none;
+
+    accent-color: var(--background-extend);
 }

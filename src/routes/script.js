@@ -67,7 +67,7 @@ const longitudine = 13.767766;
 
 const mapOptions = {
     center: new google.maps.LatLng(latitudine, longitudine),
-    zoom: 16,
+    zoom: 14,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
 };
 
