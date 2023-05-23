@@ -76,3 +76,7 @@ input {
 a:hover > .text {
     color: var(--text-accent);
 }
+
+a:hover > .text-accent {
+    color: var(--text-accent-extend);
+}
