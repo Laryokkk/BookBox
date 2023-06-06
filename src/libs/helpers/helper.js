@@ -1,126 +1,34 @@
-// empty
+import { fetchUtils } from "../utils/fetchUtils.js";
 
-const libraries = [];
+let items;
+await fetchUtils.postData('/src/api/api.php')
+    .then(fetchResponse => {
+        const responseStatus = fetchResponse.status;
 
-libraries.push({
-    name: 'Grande biblioteca',
-    address: 'Via del Ronco, 7, 34133',
-    items: {
-        books: [
-            {
-                isbn: '231242312',
-                title: 'The Hobbit',
-                author: ['J.R.R. Tolkien'],
-                published: '2001/02/21',
-                publisher: 'Home of books',
-                isbn: '687356654',
-                available: '21/06/2022',
-                library: 'San Giacomo',
-            },
-            {
-                isbn: '231242312',
-                title: 'The Hobbit',
-                author: ['J.R.R. Tolkien'],
-                published: '2001/02/21',
-                publisher: 'Home of books',
-                isbn: '687356654',
-                available: '21/06/2022',
-                library: 'San Giacomo',
-            },
-            {
-                isbn: '231242312',
-                title: 'The Hobbit',
-                author: ['J.R.R. Tolkien'],
-                published: '2001/02/21',
-                publisher: 'Home of books',
-                isbn: '687356654',
-                available: '21/06/2022',
-                library: 'San Giacomo',
-            },
-        ]
-    }
-});
-
-const items = [
-    {
-        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
-        isbn: '231242312',
-        title: 'The Hobbit',
-        author: ['J.R.R. Tolkien'],
-        published: '2001/02/21',
-        publisher: 'Home of books',
-        available: '21/06/2022',
-        library: 'San Giacomo',
-    },
-    {
-        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
-        isbn: '231242312',
-        title: 'The Hobbit',
-        author: ['J.R.R. Tolkien'],
-        published: '2001/02/21',
-        publisher: 'Home of books',
-        available: '21/06/2022',
-        library: 'San Giacomo',
-    },
-    {
-        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
-        isbn: '231242312',
-        title: 'The Hobbit',
-        author: ['J.R.R. Tolkien'],
-        published: '2001/02/21',
-        publisher: 'Home of books',
-        available: '21/06/2022',
-        library: 'San Giacomo',
-    },
-    {
-        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
-        isbn: '231242312',
-        title: 'The Hobbit',
-        author: ['J.R.R. Tolkien'],
-        published: '2001/02/21',
-        publisher: 'Home of books',
-        available: '21/06/2022',
-        library: 'San Giacomo',
-    },
-    {
-        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
-        isbn: '231242312',
-        title: 'The Hobbit',
-        author: ['J.R.R. Tolkien'],
-        published: '2001/02/21',
-        publisher: 'Home of books',
-        available: '21/06/2022',
-        library: 'San Giacomo',
-    },
-    {
-        imgPath: 'https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg',
-        isbn: '231242312',
-        title: 'The Hobbit',
-        author: ['J.R.R. Tolkien'],
-        published: '2001/02/21',
-        publisher: 'Home of books',
-        available: '21/06/2022',
-        library: 'San Giacomo',
-    },
-]
+        if (responseStatus >= 200 && responseStatus < 300) {
+            items = JSON.parse(fetchResponse.data);
+        } else {
+            console.error(fetchResponse);
+        }
+    });
 
 const filterLibrary = {
     title: 'Biblioteche',
     checkboxList: [
         {
             name: 'library',
-            title: 'san-giacomo',
-            titleText: 'San Giacomo',
+            title: 'Biblioteka imeni Lenina',
+            titleText: 'Biblioteka imeni Lenina',
         },
         {
             name: 'library',
-            title: 'san-giacomo',
-            titleText: 'San Giacomo',
+            title: 'Viva la letteratura',
+            titleText: 'Viva la letteratura',
         },
         {
             name: 'library',
-            title: 'san-giacomo',
-            titleText: 'San Giacomo',
+            title: 'National Library',
+            titleText: 'National Library',
         },
     ]
 };

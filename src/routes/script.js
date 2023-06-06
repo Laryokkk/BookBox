@@ -18,13 +18,12 @@ let filterOptions = '';
 let searchOptions = '';
 
 const header = new Header(sections.header)
-header.init();
-
 const filterLibrary = new DropDown(sections.filterLibrarys, filterLibraryProps);
-filterLibrary.init();
+// const filterItem = new DropDown(sections.filterItems, filterItemsProps);
 
-const filterItem = new DropDown(sections.filterItems, filterItemsProps);
-filterItem.init();
+header.init();
+filterLibrary.init();
+// filterItem.init();
 
 const listItems = [];
 items.forEach(item => {
@@ -45,9 +44,9 @@ sections.filterLibrarys.addEventListener('handlerChangeDropdown', (e) => {
     updateFilter(filterLibrary);
 });
 
-sections.filterItems.addEventListener('handlerChangeDropdown', (e) => {
-    updateFilter(filterItem)
-});
+// sections.filterItems.addEventListener('handlerChangeDropdown', (e) => {
+//     updateFilter(filterItem)
+// });
 
 const updateFilter = (section) => {
     filterOptions = section.getCheckedBoxes();
@@ -80,8 +79,6 @@ const refreshItems = () => {
 
     sections.notFind.classList.toggle('hidden', counter !== 0);
 };
-
-
 
 const latitudine = 45.650075;
 const longitudine = 13.767766;

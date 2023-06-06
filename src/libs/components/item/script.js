@@ -1,4 +1,6 @@
 import { componentUtils } from "../../utils/componentUtils.js";
+import { cookieUtils } from "../../utils/cookieUtils.js";
+
 
 class Item {
     constructor(parentElement, props) {
@@ -69,7 +71,16 @@ class Item {
     }
 
     initEventListeners() {
+        this.elements.buttonItem.addEventListener('click', (e) => {
+            if (!cookieUtils.isSigned()) {
+                e.preventDefault();
 
+                window.location.href = './sign_in/index.html'
+            }
+
+            
+            // бронирование 
+        });
     }
 
     render() {
